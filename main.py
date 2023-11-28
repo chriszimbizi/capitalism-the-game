@@ -241,10 +241,7 @@ if __name__ == "__main__":
                 game_choice = get_user_game_choice()
 
         country = get_country(game_choice, all_countries_lower)
-        print(country)
         capital = get_country_capital(country)
-
-        print(capital)
 
         play_game(country, capital)
 
