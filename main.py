@@ -197,7 +197,10 @@ def play_game(country, capital):
         )
         guess_processed = unidecode(guess.lower())
 
-        if guess_processed == capital_processed:
+        if not guess_processed:
+            print("Invalid attempt, Please try again: ")
+
+        elif guess_processed == capital_processed:
             print(
                 f"\nWell done! You answered correctly. The capital city of {country} is {capital}."
             )
