@@ -187,13 +187,14 @@ def play_game(country, capital):
     while True:
         try:
             max_attempts = int(input("\nHow many guesses would you like? "))
+            print()
             break
         except ValueError:
             print("Please enter a valid integer.")
 
     for attempt in range(1, max_attempts + 1):
         guess = input(
-            f"\nAttempt {attempt}/{max_attempts}: What is the capital of {country}? 'f' to give up.\n\t"
+            f"Attempt {attempt}/{max_attempts}: What is the capital of {country}? 'f' to give up.\n\t"
         )
         guess_processed = unidecode(guess.lower())
 
@@ -219,15 +220,21 @@ def play_game(country, capital):
             if hint_prompt.lower()[0] == "y":
                 print(f"\nThe capital of {country} begins with {capital[0]}.")
                 continue
+            elif hint_prompt.lower()[0] == "n":
+                print(f"\nAlright big shot, last chance.")
+                continue
+            else:
+                hint_prompt = input("\nPlease enter 'y' or 'n': ")
         elif attempt == max_attempts:
             print(
-                f"Sorry, you've reached the maximum number of attempts. The correct answer is {capital}.\n"
+                f"\nSorry, you've reached the maximum number of attempts. The correct answer is {capital}."
             )
         else:
             print(random.choice(comments))
+            print()
 
 
-if __name__ == "__main__":
+def main():
     all_countries_lower = get_all_countries()
 
     print("\nWelcome to Capitalism!")
@@ -254,3 +261,6 @@ if __name__ == "__main__":
             if confirmation == "y":
                 print("Goodbye!\n")
                 break
+
+
+main()
