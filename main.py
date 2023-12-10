@@ -1,6 +1,7 @@
 import requests
 import random
 from unidecode import unidecode
+import os
 
 # List of comments for incorrect answers
 comments = [
@@ -234,12 +235,18 @@ def play_game(country, capital):
             print()
 
 
+def clear_screen():
+    """Clears the console screen."""
+    os.system("clear" if os.name == "posix" else "cls")
+
+
 def main():
     all_countries_lower = get_all_countries()
 
     print("\nWelcome to Capitalism!")
 
     while True:
+        clear_screen()
         game_choice = get_user_game_choice()
 
         if game_choice == 4:  # Quit
@@ -263,4 +270,5 @@ def main():
                 break
 
 
-main()
+if __name__ == "__main__":
+    main()
