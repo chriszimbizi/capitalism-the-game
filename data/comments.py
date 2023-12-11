@@ -1,0 +1,22 @@
+# List of comments for incorrect answers
+comments = [
+    "Come on, you can do better!",
+    "Seriously? Try again!",
+    "Wow, that was way off!",
+    "Nice try, but not quite.",
+    "Keep guessing!",
+    "Is that the best you've got?",
+    "Almost there, but not quite!",
+    "A for effort, F for results!",
+    "Not even close!",
+    "Haha, not even in the ballpark!",
+    "Give it another shot, maybe you'll get lucky!",
+    "You're about as accurate as a blindfolded archer!",
+    "Fail to the chief! Try again.",
+    "You must be a master of almost getting it right!",
+    "Next time, perhaps?",
+    "Are you sure you're trying?",
+    "One small step for you, one giant leap for failure!",
+    "I've seen better attempts in my sleep!",
+    "You're like a broken compass, all over the place!",
+]
