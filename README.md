@@ -10,7 +10,7 @@ Welcome to Capitalism, a console-based Python game designed to test your knowled
 ### Installation
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/capitalism-the-game.git
+   git clone https://github.com/chriszimbizi/capitalism-the-game.git
    ```
 
 2. Install required dependencies:
